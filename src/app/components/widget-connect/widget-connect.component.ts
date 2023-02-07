@@ -15,8 +15,7 @@ export class WidgetConnectComponent implements OnInit {
     access = ''
     // implemented method
     ngOnInit(): void {
-      //this.loadScript('https://cdn.belvo.io/belvo-widget-1-stable.js');
-      this.router.navigate([`/transactions/f1b75637-dcca-4596-8ac4-12ff15cdfb1e`]);
+      this.loadScript('https://cdn.belvo.io/belvo-widget-1-stable.js');
     }
 
     async createWidget() {
@@ -36,16 +35,13 @@ export class WidgetConnectComponent implements OnInit {
               scopes: 'read_institutions,write_links,read_links'
           }
       };
-      console.log(options)
       const cred = await axios.request(options)
       return cred.data
       }
       const successCallbackFunction = (link: any, institution: any) => {
           // Do something with the link and institution,
           // such as associate it with your registered user in your database.
-          console.log(link);
-          console.log(institution);
-          //this.router.navigate([`/transactions/${link}`]);
+          window.location.href = `/transactions/${link}`
       }
       const onExitCallbackFunction = (data: any) => {
           // Do something with the exit data.

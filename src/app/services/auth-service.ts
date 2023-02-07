@@ -7,7 +7,6 @@ import { Injectable } from "@angular/core";
 export class credService {
 
     async getCredentials(): Promise<any>{
-        console.log('1111');
         const options = {
             method: 'POST',
             url: 'https://sandbox.belvo.com/api/token/',
@@ -22,9 +21,7 @@ export class credService {
                 scopes: 'read_institutions,write_links,read_links'
             }
         };
-        console.log(options)
         const cred = await axios.request(options)
-        console.log(cred.data)
         return cred.data;
     }
 

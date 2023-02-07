@@ -16,7 +16,6 @@ export class BankListComponent implements OnInit {
   ngOnInit(): void {
     (async () => {
       const banksResponse = await this._bankService.getBanks();
-      console.log(banksResponse);
       this.banks = banksResponse.results;
     })();
   }

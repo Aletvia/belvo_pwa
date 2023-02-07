@@ -1,0 +1,11 @@
+
+.center {
+    height: 99%;
+    text-align: center;
+  }
+
+  .center mat-spinner {
+    display: inline-block;
+    vertical-align: middle;
+    top: 30%;
+  }

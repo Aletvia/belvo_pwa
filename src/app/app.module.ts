@@ -3,7 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MatTableModule } from '@angular/material/table'
 import { MatGridListModule } from '@angular/material/grid-list'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BankListComponent } from './components/bank-list/bank-list.component';
 import { TransactionsListComponent } from './components/transactions-list/transactions-list.component';
@@ -20,7 +22,9 @@ import { WidgetConnectComponent } from './components/widget-connect/widget-conne
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatTableModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -20,7 +20,6 @@ export class bankService {
         };
         
         const banks = await axios.request(options)
-        console.log(banks.data)
         return banks.data;
     }
 
