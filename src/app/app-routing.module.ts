@@ -6,7 +6,7 @@ import { TransactionsListComponent } from './components/transactions-list/transa
 
 const routes: Routes = [
   {
-    path: 'connecting',
+    path: '',
     component: WidgetConnectComponent
   },
   {
